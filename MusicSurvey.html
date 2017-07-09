@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title> Music Survey </title>
+<link type="text/css" rel="stylesheet" href="stylesheet.css"/> 
+</head>
+	<body>
+		<form method ="post" action="http://www.markmurtha.com/csis128/readform.asp">
+		<label for= "myName">Name: </label>
+		<input type="text" name="myName" id="myName" required="required" placeholder="your first and last name"> <br>
+		<label for="myEmail">Email:</label>
+		<input type="email" name="myEmail" id="myEmail" required="required" placeholder="you@yourdomain.com">
+		<fieldset>
+		<legend>Music type</legend>
+		Select your favorite types of music: <br>
+		<input type="checkbox" name="classical" id="classical" value="yes"> Classical<br>
+		<input type="checkbox" name="country" id="country" value="yes"> Country<br>
+		<input type="checkbox" name="rap" id="rap" value="yes"> Rap<br>
+		<input type="checkbox" name="rock" id="rock" value="yes"> Rock<br>
+		</fieldset>
+		
+		<fieldset>
+		<legend>Music purchase</legend>
+		Select how often you purchase music: <br>
+		<input type="radio" name="frequency" id="freqDaily" required="required" value="daily">Daily<br>
+		<input type="radio" name="frequency" id="freqMonthly" required="required" value="month">Monthly<br>
+		<input type="radio" name="frequency" id="freqYearly" required="required" value="yearly">Yearly<br>
+		<input type="radio" name="frequency" id="freqNever" required="required" value="never">Never<br>
+		</fieldset>
+		
+		Select where you listen to music: <br>
+		<select size="3" name="jumpMenu" id="jumpMenu" multiple="multiple">
+			<option value="Home">Home</option>
+			<option value="Work">Work</option>
+			<option value="Car">Car</option>
+			<option value="Outside">Outside</option>
+		</select> <br>
+		
+		What role does music play in your life?<br>
+		<textarea name="role" id="role" cols="60" rows="3"> Enter your response here </textarea>
+		<div id="related"> 
+		<input type="submit" name="submit" id="submit" value="Submit Survey">
+		<input type="reset" name="reset" id="reset" value="Reset">
+		</div>
+		</form>
+		<footer>
+			<link>
+			<a href= "mailto:s1460946@student.mcckc.edu&subject=Replies%20for%20my%20assignments">Ryan Clark</a>
+			</link> 
+	</footer> 
+	</body>
+</html>
+
+
+
+
+
+

@@ -30,3 +30,16 @@ address {
   margin-top: 1em;
   padding-top: 1em;
   border-top: thin dotted }
+ form {	background-color:#eaeaea;
+		font-family:Arial, sans-serif;
+		padding: 10px;}
+label {	float: left;
+		width: 50px;
+		clear: left;
+		text-align: right;
+		padding-right: 10px;
+		margin-top: 10px;}
+input, textarea {	margin-top: 10px;
+					}
+#submit,#reset {	margin-left: 10px;
+			display:inline;} 

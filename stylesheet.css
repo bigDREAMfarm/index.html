@@ -43,3 +43,8 @@ input, textarea {	margin-top: 10px;
 					}
 #submit,#reset {	margin-left: 10px;
 			display:inline;} 
+.error {	font-family: Arial, sans-serif;
+		font-style: italic;
+		font-size: .90em;
+		color: #FF0000;
+		margin-left: 1em;}

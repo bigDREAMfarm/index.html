@@ -4,23 +4,42 @@ body {
         Times, serif;
   color: black;
   background-color: #66CCCC }
-
 nav { 	float: left;
 		width: 150px;
+		position: relative;
+		;
+		
+		}		
+nav a {	text-decoration: none;}		
+nav ul{	list-style-type: none;
+		display: block;
 		}
-		
-nav a {text-decoration: none;}
-		
-nav ul{list-style-type: none;}
 
+nav ul li{	border:1px solid #000000;
+		background-color: #0099CC;		
+		}
+
+
+nav ul ul{	position: absolute;
+		background-color: #66CCFF;
+		padding: 0;
+		text-align: left;
+		display: none;
+}
+nav ul ul li{	border:1px solid #000000;
+				display: block;
+				width: 80px;
+				padding-left: 50px;
+				margin-left: 0;
+}
+nav a:hover ul{ display: block;}
 main {	margin-left: 150px;
 		margin-right:150px;
 		background-color: #FFFFFF;
-		padding-left: 20px;
-		padding-right: 100px;
+		padding-left: 50px;
+		padding-right: 50px;
 	}
-
-head{ background-color: #6600ff;}
+head{ background-color: #0099CC;}
 
 page_name{ background-color: #CCCCFF;}
 

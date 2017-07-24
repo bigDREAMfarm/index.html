@@ -7,9 +7,7 @@ body {
   background-color: #66CCCC }
 nav { 	float: left;
 		width: 150px;
-		position: relative;
-		;
-		
+		position: relative;		
 		}		
 nav a {	text-decoration: none;}		
 nav ul{	list-style-type: none;
@@ -39,6 +37,8 @@ main {	margin-left: 150px;
 		background-color: #FFFFFF;
 		padding-left: 50px;
 		padding-right: 50px;
+		padding-top: 10px;
+		padding-bottom: 10px;
 	}
 
 page_name{ background-color: #CCCCFF;}
@@ -50,7 +50,7 @@ address {
   margin-top: 1em;
   padding-top: 1em;
   border-top: thin dotted }
- form {	background-color:#FFFFFF;
+form {	background-color:#FFFFFF;
 		font-family:Arial, sans-serif;
 		padding: 10px;}
 label {	float: left;
@@ -67,5 +67,22 @@ input, textarea {	margin-top: 10px;
 		font-size: .90em;
 		color: #FF0000;
 		margin-left: 1em;}
+table {
+			border: 5px solid #000066;
+			background-color: E9E9E9;
+			align: center;
+			}
+	.headings {
+			font-weight: bold;
+			}
+	caption {
+			font-weight: bold;
+			font-size: 1.2em;
+			color: white;
+			background-color: #36454f;
+			}
+	td,th { 
+		border: 1px solid #000066;
+		}
 #page_title {padding-left: 150px;}
 

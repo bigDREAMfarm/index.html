@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<title> Contact Us </title>
+		<link type="text/css" rel="stylesheet" href="bdf_stylesheet.css"/>
+		<div id = "page_title">
+		<h1> Contact Us </h1>
+		</div>
+		<script>
+		function validateForm() 
+		{
+			if (document.forms[0].user_name.value == ""){
+				alert("Your name is not provided.  Please complete to proceed.");
+				return false;
+				}
+			if (document.forms[0].email_address.value == ""){
+				alert("Your email address is not provided. Please complete to proceed");
+				return false;
+				}
+				return true;
+	}
+	</script>
+	</head>
+		<nav>
+		<div id = "nav">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about_us.html">About Us</a></li>
+				<li><a href="farm_members.html">Farming Area's</a></li>
+					<ul>
+						<li><a href="lammas.html">Lammas</li>
+						<li><a href="goats.html">Goats</li>
+						<li><a href="sheep.html">Sheep</li>
+						<li><a href="birds.html">Chicken and Turkeys</li>
+						<li><a href="bees.html">Bees</li>
+						<li><a href="garden.html">Garden</li>		
+					</ul>					
+				<li><a href="blog.html">Blog</a></li>
+				<li><a href="for_sale.html">For Sale</a></li>
+				<li><a href="recommended_sites.html">Recommeded Sites</a></li>
+				<li><a href="contact.html">Contact Us</a></li>
+			</ul>
+		</div>
+		</nav>
+			<main>
+				<div id="main_content">
+					<form method ="post" action="mailto:bigdreamfarm.com@gmail.com" onsubmit="return validateForm();">
+					
+					<label for= "user_name">Name: </label> 
+					<input type="text" name="user_name" id="user_name" 
+					placeholder="your first and last name"> 
+					<br>
+					<label for="email_address">Email:</label> 
+					<input type="email" name="email_address" id="email_address" placeholder="you@yourdomain.com">
+					<br>
+					<fieldset>
+					<legend>Page</legend>
+					Select the page you are contacting us about: <br>
+					<input type="checkbox" name="" id="about_us" value="yes"> About Us<br>
+					<input type="checkbox" name="lammas" id="lammas" value="yes"> Lammas<br>
+					<input type="checkbox" name="goats" id="goats" value="yes"> Goats<br>
+					<input type="checkbox" name="sheep" id="sheep" value="yes"> Sheep<br>
+					<input type="checkbox" name="goats" id="goats" value="yes"> Goats<br>
+					<input type="checkbox" name="birds" id="birds" value="yes"> Chicken and Turkeys<br>
+					<input type="checkbox" name="bees" id="bees" value="yes"> Bees<br>
+					<input type="checkbox" name="garden" id="garden" value="yes"> Garden<br>
+					<input type="checkbox" name="blog" id="blog" value="yes"> Blog<br>
+					<input type="checkbox" name="sale" id="sale" value="yes"> For Sale<br>
+					</fieldset>
+					
+					<fieldset>
+					<legend>Referral Source</legend>
+					Select the option that best describes how you found us: <br>
+					<input type="radio" name="referral" id="refFriend" required="required" value="friend">a friend told me<br>
+					<input type="radio" name="referral" id="refInternet" required="required" value="internet">found on the internet<br>
+					<input type="radio" name="referral" id="refAnimalSwap" required="required" value="swap">met at animal swap<br>
+					<input type="radio" name="referral" id="refUs" required="required" value="Us">we told you<br>
+					<input type="radio" name="referral" id="refOther" required="required" value="other"> Other<br>
+					</fieldset>
+					
+					Tell us a little about yourself and what you are looking for:<br>
+					<textarea name="freeForm" id="freeForm" cols="60" rows="3"> Enter your response here </textarea>
+					<div id="related"> 
+					<input type="submit" name="submit" id="submit" value="Contact Us">
+					<input type="reset" name="reset" id="reset" value="Reset">
+				</div>
+				</form>
+			</main>
+			<footer>
+				
+				<link>
+				<a href= "mailto:bigdreamfarm.com@gmail.com">Contact bigDREAMfarm</a>
+				</link> 
+			</footer> 
+
+</html>
+
+
+
+
+
+

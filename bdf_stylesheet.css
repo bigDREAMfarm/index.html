@@ -1,3 +1,4 @@
+head{	background-color: #0099CC;}
 body {
   padding-left: 5px;
   font-family: Georgia, "Times New Roman",
@@ -39,17 +40,8 @@ main {	margin-left: 150px;
 		padding-left: 50px;
 		padding-right: 50px;
 	}
-head{ background-color: #0099CC;}
 
 page_name{ background-color: #CCCCFF;}
-
-
-
-
-
-
-
-
 a:link {
   color: blue }
 a:visited {
@@ -58,12 +50,11 @@ address {
   margin-top: 1em;
   padding-top: 1em;
   border-top: thin dotted }
- form {	background-color:#eaeaea;
+ form {	background-color:#FFFFFF;
 		font-family:Arial, sans-serif;
 		padding: 10px;}
 label {	float: left;
 		width: 50px;
-		clear: left;
 		text-align: right;
 		padding-right: 10px;
 		margin-top: 10px;}
@@ -76,3 +67,5 @@ input, textarea {	margin-top: 10px;
 		font-size: .90em;
 		color: #FF0000;
 		margin-left: 1em;}
+#page_title {padding-left: 150px;}
+

@@ -5,6 +5,14 @@ body {
         Times, serif;
   color: black;
   background-color: #66CCCC }
+main {	margin-left: 150px;
+		margin-right:150px;
+		background-color: #FFFFFF;
+		padding-left: 50px;
+		padding-right: 50px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
 nav { 	float: left;
 		width: 150px;
 		position: relative;		
@@ -32,14 +40,7 @@ nav ul ul li{	border:1px solid #000000;
 				margin-left: 0;
 }
 nav a:hover ul{ display: block;}
-main {	margin-left: 150px;
-		margin-right:150px;
-		background-color: #FFFFFF;
-		padding-left: 50px;
-		padding-right: 50px;
-		padding-top: 10px;
-		padding-bottom: 10px;
-	}
+
 page_name{ background-color: #CCCCFF;}
 a:link {
   color: blue }
@@ -68,8 +69,8 @@ input, textarea {	margin-top: 10px;
 		margin-left: 1em;}
 table {
 			border: 5px solid #000066;
-			background-color: E9E9E9;
-			align: center;
+			background-color: #E9E9E9;
+			text-align: center;
 			}
 	.headings {
 			font-weight: bold;

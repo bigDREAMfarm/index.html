@@ -22,10 +22,11 @@ nav ul{	list-style-type: none;
 		display: block;
 		}
 
-nav ul li{	border:1px solid #000000;
+nav ul li {	border:1px solid #000000;
 		background-color: #0099CC;		
 		}
 
+nav li:hover ul{ display: block;}
 
 nav ul ul{	position: absolute;
 		background-color: #66CCFF;
@@ -39,7 +40,8 @@ nav ul ul li{	border:1px solid #000000;
 				padding-left: 50px;
 				margin-left: 0;
 }
-nav a:hover ul{ display: block;}
+
+
 
 page_name{ background-color: #CCCCFF;}
 a:link {

@@ -22,7 +22,7 @@ This program automates the breakfast billing system.
 using namespace std;
 
 const int num_items = 8;
-const double sales_tax = 1.05;
+const double sales_tax = .05;
 
 struct menuItemType
 {
@@ -58,10 +58,6 @@ int main()
 	menuItemType menuList[num_items];
 	order purchaseList[num_items];
 	
-	cout << "Enter the menu ID file name: ";
-	cin >> inputFile;
-	cout << endl;
-
 	infile.open(Ch9_Ex4Data.txt);
 
 	if (!infile)
@@ -76,9 +72,8 @@ int main()
 
 	getData(infile, menuList, num_items);
 	showMenu(menuList, purchaseList, num_items, quantity_purchased, sub_total);
-	printCheck(outfile, purchaseList, sub_total, sales_tax, quantity_purchased);
+	printCheck(outfile, purchaseList, sales_tax, sub_total, quantity_purchased);
 
-	
 	infile.close();
 	outfile.close();
 
@@ -97,12 +92,12 @@ bool isValid()
 	else
 		return true;
 }
-void getData(ifstream& indata, menuItemType menuList[], int listSize)
+void getData(ifstream& infile, menuItemType menuList[], int listSize)
 {
 	for (int index = 0; index < listSize; index++)
 	{
-		indata >> menuList[index].menuItem;
-		indata >> menuList[index].menuPrice;
+		infile >> menuList[index].menuItem;
+		infile >> menuList[index].menuPrice;
 	}
 }
 void showMenu(menuItemType menuList[], order purchaseList[], int listSize, int& quantity_purchased,double& tot)

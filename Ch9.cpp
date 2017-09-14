@@ -39,9 +39,9 @@ struct order
 
 
 bool isValid();
-void getData(ifstream& infile, menuItemType menuList[], int listSize);
-void showMenu(menuItemType menuList[], order purchaseList[], int listSize, int& quantity_purchased, double& tot);
-void printCheck(ofstream& outfile,menuItemType purchaseList[],double sales_tax, int listSize);
+void getData(ifstream&, menuItemType[], int );
+void showMenu(menuItemType[], order[], int , int&, double&);
+void printCheck(ofstream&, order[],const double, double, int);
 void reorder(char&, string);
 
 int main()
@@ -57,8 +57,8 @@ int main()
 
 	menuItemType menuList[num_items];
 	order purchaseList[num_items];
-	
-	infile.open(Ch9_Ex4Data.txt);
+	string filename = "Ch9_Ex4Data.txt";
+	infile.open(filename.c_str());
 
 	if (!infile)
 	{
@@ -66,8 +66,8 @@ int main()
 			<< endl;
 		return 1;
 	}
-
-	outfile.open(Ch9_Receipt.txt);
+	string out_filename = "Ch9_Receipt.txt";
+	outfile.open(out_filename.c_str());
 	outfile << fixed << showpoint << setprecision(2);
 
 	getData(infile, menuList, num_items);
@@ -123,7 +123,7 @@ void showMenu(menuItemType menuList[], order purchaseList[], int listSize, int& 
 	}	
 }
 
-void printCheck(ofstream& outfile,menuItemType purchaseList[], double sub_total, double sales_tax, int listSize)
+void printCheck(ofstream& outfile,order purchaseList[], double sub_total, double sales_tax, int listSize)
 {
 	int index;
 	double tax_amount,amount_due;

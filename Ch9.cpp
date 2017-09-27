@@ -53,12 +53,13 @@ int main()
 	string inputFile;
 	string outputFile;
 	int quantity_purchased;
-	double sub_total;
+	double sub_total = 0;
 
 	menuItemType menuList[num_items];
 	order purchaseList[num_items];
-	string filename = "Ch9_Ex4Data.txt";
-	infile.open(filename.c_str());
+	
+	string in_filename = "Ch9_Ex4Data.txt";
+	infile.open(in_filename.c_str());
 
 	if (!infile)
 	{
@@ -66,8 +67,11 @@ int main()
 			<< endl;
 		return 1;
 	}
+
 	string out_filename = "Ch9_Receipt.txt";
 	outfile.open(out_filename.c_str());
+	
+
 	outfile << fixed << showpoint << setprecision(2);
 
 	getData(infile, menuList, num_items);
@@ -100,10 +104,9 @@ void getData(ifstream& infile, menuItemType menuList[], int listSize)
 		infile >> menuList[index].menuPrice;
 	}
 }
-void showMenu(menuItemType menuList[], order purchaseList[], int listSize, int& quantity_purchased,double& tot)
+void showMenu(menuItemType menuList[], order purchaseList[], int listSize, int& quantity_purchased,double& sub_total)
 {
 	int item_purchased;
-	double total = 0;
 	cout << " Johnny's Restaurant Menu " << endl;
 	for (int index = 0; index < listSize; index++)
 	{
@@ -114,24 +117,34 @@ void showMenu(menuItemType menuList[], order purchaseList[], int listSize, int& 
 	cin >> quantity_purchased;
 
 	cout << " Please enter each item number separated by a space: " << endl;
-	for (int index = 0; index < num_items; index++)
+	for (int index = 0; index < quantity_purchased; index++)
 	{
 		cin >> item_purchased;
-		menuList[item_purchased].menuItem = purchaseList[item_purchased].menuItem;
-		menuList[item_purchased].menuPrice = purchaseList[item_purchased].menuPrice;
-		total = menuList[item_purchased].menuPrice + total;
+		cout << menuList[item_purchased].menuItem;
+		purchaseList[index].menuItem = menuList[item_purchased].menuItem;
+		cout << purchaseList[index].menuItem;
+		cout << menuList[item_purchased].menuPrice;
+		purchaseList[index].menuPrice = menuList[item_purchased].menuPrice ;
+		cout << purchaseList[index].menuPrice;
+		
+		sub_total = purchaseList[index].menuPrice + sub_total;
+		cout << sub_total;
+		system("pause");
 	}	
 }
 
 void printCheck(ofstream& outfile,order purchaseList[], double sub_total, double sales_tax, int listSize)
 {
-	int index;
 	double tax_amount,amount_due;
 	outfile << " ------------- Welcome to Johnny's Restaurant ---------------" << endl;
 	outfile << endl;
-	for (int index = 0; index < num_items; index++)
+	for (int index = 0; index < listSize; index++)
 	{
+		cout << purchaseList[index].menuItem;
+			cout << purchaseList[index].menuPrice << endl;
 		outfile << purchaseList[index].menuItem << setw(10) << purchaseList[index].menuPrice << endl;
+		
+		system("pause");
 	}
 	tax_amount = sub_total * sales_tax;
 	outfile << "Tax" << setw(10) << tax_amount << endl;
